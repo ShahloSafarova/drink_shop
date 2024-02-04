@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>My Profile</h3>
+<img style="width: 300px; height:300px;" src="{{ user.user_image.url }}" alt="User Image">
+<p>
+   Full name: {{user.first_name}} {{user.last_name}}
+</p>
+<p>Phone: {{ user.phone }}</p>
+<p>Email: {{ user.email }}</p>
+
+<a href="{% url 'update' %}"><p>Update Profile</p></a>
+<a href="{% url 'delete' %}"><p style="color: red;">Delete Profile</p></a>
+{% endblock content %}

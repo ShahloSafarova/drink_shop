@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Ichimliklar detail {% endblock title %}
+{% block content %}
+<h2>Landing page</h2>
+    <img style="width:400px; height:500px;" src="{{ ichimliklar.image_drink.url }}"><br>
+    {{ drink.name}}<br>
+    {{ drink.isbn }}<br>
+    {{ drink.price }}<br>
+    {{ drink.company }}<br>
+    {{ drink.short_description }}<br>
+    {{ drink.create_at }}<br>
+<a href="{% url 'drinks' %}">Ichimliklar</a>
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for ichimliklar in drinks %}
+    <a href="{% url 'about-drink' ichimliklar.pk %}">
+    <img style="width:300px; height:400px;" src="{{ ichimlik.image_drink.url }}" alt="{{ichimliklar.image_drink}} image">
+    <h4>{{ ichimliklar.name }}</h4>
+    </a>
+    <br><hr>
+    {% endfor %}
+
+{% endblock %}
